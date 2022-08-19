@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+/* Typography styles */
+h2 {
+    color: white;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Main Page Styles */
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+    border: solid 1px black;
+    background-color: green;
+}
+.main-content{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.navbar {
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-right:80px;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 90%;
+    border: solid 1px black;
+    background-color: yellow;
+}
+
+.column {
+    border: solid 1px black;
+    background-color: blue;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    padding: 10px;
+    padding-bottom:50px;
+    width:45%;
+}
+
+.column .boxes{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    height: 400px;
+    margin-top:100px;
+}
+    .box{
+    text-align:center;
+    color: aliceblue;
+    margin:5px; 
+    background-color:green;
+    width: 125px;
+    height: 125px;
+} 
