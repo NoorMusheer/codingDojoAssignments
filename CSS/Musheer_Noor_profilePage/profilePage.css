@@ -1,0 +1,174 @@
+* {
+    margin: 0 auto;
+    padding: 0; 
+}
+
+#container{
+    width:900px;
+}
+
+.header{
+    height: 80px;
+    color: white;
+    display:flex;
+    justify-content: space-between;
+    background-color: slategray;
+}
+
+#header-col-1{
+    flex:3;
+    display:flex;
+    justify-content: left;
+    align-items:center;
+    padding-left:30px;
+}
+h1{
+    font-size: 3rem;
+    flex:1;
+}
+
+#navLinks{
+    margin:0% 15%;
+    flex:4;
+    display:flex;
+    justify-content:center;
+}
+#navLinks a{
+    color:white;
+    text-decoration: none;
+}
+
+#header-col-2{
+    display:flex;
+    align-self: center;
+    margin-right:30px;
+}
+
+button{
+    height:40px;
+    width:100px;
+    font-size:20px;
+    background-color: blue;
+    color:white;
+    box-shadow: 3px 3px black;
+}
+
+
+#main-content{
+    background-color: blanchedalmond;
+    display:flex;
+}
+
+#main-display{
+    flex:2;
+    margin:30px 15px 30px 30px;
+}
+
+#profile-card-header{
+    background-color:lightseagreen;
+    height:5rem;
+}
+.profile-images{
+    border-radius:50%;
+    width: 20%;
+    margin-top:20px;
+    margin-left:25px;
+}
+
+#profile-card-main{
+    background-color:white;
+    align-content:left;
+    border: 3px solid slategray;
+    border-top:none;
+    padding:70px 0px 20px 25px;
+}
+#profile-card-main img{
+    height:20px;
+    width:20px;
+}
+
+#side-panel{
+    background-color:orange;
+    flex:1;
+}
+
+#requests, #connections{
+    margin: 0px 15px;
+}
+
+.infobox-header{
+    background-color: slategray;
+    margin-top:30px;
+    height:3rem;
+    color:white;
+    font-size:1.5rem;
+    display:grid;
+    justify-content: left;
+    align-items:center;
+    padding-left:25px;
+}
+
+.infobox-main{
+    background-color:white;
+    font-size:large;
+    padding-left:25px;
+    padding-top:15px;
+    border:3px solid slategray;
+    border-top:none;
+}
+#requests .infobox-header, #connections .infobox-header{
+    display:flex;
+    padding-left:5px;
+}
+#requests .infobox-main, #connections .infobox-main{
+    padding:0;
+    margin:0;
+}
+
+.counter{
+    background-color: gainsboro;
+    flex:1;
+    text-align:center;
+    color:black;
+    border-radius:100%
+}
+
+#requests .infobox-header h5 {
+    flex:6;
+    margin-left:5px;
+}
+
+.requestsForConnection1, .requestsForConnection2, .connected-users{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin:0px 5px;
+    padding:0;
+}
+.requestsForConnection1 .profile-images, .requestsForConnection2 .profile-images, .connected-users .profile-images{
+    flex:1;
+    padding:0;
+    margin:5px 10px;
+}
+.usersNames{
+    flex:3;
+}
+.connectedUsersNames{
+    flex:4;
+}
+
+.respond-icon1, .respond-icon2 {
+    margin-right:10px;
+    width:30px;
+}
+
+#connections .infobox-header h5{
+    flex:4;
+    margin-left:5px;
+}
+
+#viewMoreBox{
+    border-top:3px solid slategray;
+    margin:0;
+    padding:10px;
+}

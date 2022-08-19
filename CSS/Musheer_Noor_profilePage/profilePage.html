@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profilePage.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <div id="header-col-1">
+                <h1>Profile</h1>
+                <div id="navLinks">
+                    <a href="#">Home</a>
+                    <h4><a href="#">My Profile</a></h4>
+                    <a href="#">Find Connections</a>
+                </div>
+            </div>       
+            <div id="header-col-2">
+                <button value="SignOut">Sign Out</button>
+            </div>
+        </div>
+        <!--- End Of Header Section-->
+        <div id="main-content">
+            <div id="main-display">
+                <div id="profile-card">
+                    <div id="profile-card-header">
+                    <img class="profile-images" src="images/jane-m.jpg" atl="Jane's profile pic">
+                    </div>
+                    <div id="profile-card-main">
+                        <h1>Jane Doe</h1>
+                        <h3><p><img src="icons/map-marker.png"> Seattle</p></h3><br>
+                        <p><h3>Developer | Engineer | Problem Solver</h3></p>
+                        <p><h3>Master of shadows and the Internet!</h3></p><br>
+                        <h4><a href="#" onclick="changeName()"><img src="icons/gear.png">  edit profile</a></h4>
+                    </div>
+                </div>
+                <!-- End of Profile Card-->
+                <div id="resume">
+                    <div class="infobox-header">
+                        <h5>Education</h5>
+                    </div>
+                    <div class="infobox-main">
+                        <h3><p>Codoing Dojo - Full Stack Bootcamp</p></h3><br>
+                        <p>Dec 2019 - Mar 2020</p>
+                        <h4><p>Triple black belt in Python, MERN, C# and ...</p></h4>
+                    </div>
+                </div>
+                <!--End of Resume-->
+            </div>
+            <!-- End of main-content section-->
+            <div id="side-panel">
+                <div id="requests">
+                    <div class="infobox-header">
+                        <div class="counter"><p>2</p></div>
+                        <h5>Connection Requests</h5>
+                    </div>
+                    <div class="infobox-main">
+                        <div class="requestsForConnection1">
+                            <img class="profile-images" src="images/todd-s.jpg" alt="Todd's Profile picture">
+                            <div class="usersNames">Todd E</div>
+                            <img class="respond-icon1" src="icons/accept-circle.png" onclick="removeRequest()"    alt="Accept Icon">
+                            <img class="respond-icon1" src="icons/close-circle.png" onclick="removeRequest()" alt="Decline Icon">
+                        </div>
+                        <div class="requestsForConnection2">
+                            <img class="profile-images" src="images/phil-s.jpg" alt="Todd's Profile picture">
+                            <div class="usersNames">Phil K</div>
+                            <img class="respond-icon2" src="icons/accept-circle.png" onclick="removeRequest2()"alt="Accept Icon">
+                            <img class="respond-icon2" src="icons/close-circle.png" onclick="removeRequest2()"alt="Decline Icon">
+                        </div>
+                    </div>
+                </div>
+                <!--End of Requests infobox-->
+                <div id="connections">
+                    <div class="infobox-header">
+                        <div class="counter"><p>500</p></div>
+                        <h5>Your Connections</h5>
+                    </div>
+                    <div class="infobox-main">
+                        <div class="connected-users">
+                            <img class="profile-images" src="images/adrien-s.jpg" alt="Todd's Profile picture">
+                            <div class="connectedUsersNames">Adrien D</div>
+                        </div>
+                        <div class="connected-users">
+                            <img class="profile-images" src="images/anne-s.jpg" alt="Todd's Profile picture">
+                            <div class="connectedUsersNames">Anne J</div>
+                        </div>
+                        <div class="connected-users">
+                            <img class="profile-images" src="images/alayne-s.jpg" alt="Todd's Profile picture">
+                            <div class="connectedUsersNames">Alayne T</div>
+                        </div>
+                        <div class="connected-users">
+                            <img class="profile-images" src="images/arry-s.jpg" alt="Todd's Profile picture">
+                            <div class="connectedUsersNames">Arry Y</div>
+                        </div>
+                        <div id="viewMoreBox"><a href="#">View More</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<script src="profilePage.js"></script>           
+</body>
+</html>

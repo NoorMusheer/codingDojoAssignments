@@ -1,0 +1,64 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+}
+#card{
+    display:flex;
+    flex-direction:column;
+}
+.top{
+    background-color:lightseagreen;
+    height:100px;
+}
+
+.main{
+    background-color: white;
+    height:180px;
+    width:596px;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    padding-bottom:20px;
+    border: 2px solid grey;
+    border-top:none;
+}
+
+img{
+    height: 20px;
+    width: 20px;
+}
+#userPhoto{
+    height:100px;
+    width:100px;
+    border: 3px solid slategray;
+    border-radius:50%;
+    position:relative;
+    top:150px;
+    left:20px;
+}
+.data3 {
+    width:300px;
+}
+
+table{
+    width: 300px;
+}
+
+tr{
+    display:flex;
+    width:300px;
+}
+td {
+    border-right: 3px solid black;
+    padding-right: 5px;
+    flex:1;
+}
+
+#lastTableCell{
+    flex:2;
+    border:none;
+}
+.data1, .data2, .data3, .data4, .data5{
+    margin-left:25px;
+}

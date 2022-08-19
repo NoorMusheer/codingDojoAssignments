@@ -1,0 +1,25 @@
+.row {
+    display: flex;
+}
+.col {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: lightcyan;
+}
+
+
+.col-2 {
+    display:flex;
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: lightcyan;
+}
+
+.subCols{
+    flex:4;
+    padding:20px;
+    margin:10px;
+    background-color: green;
+}

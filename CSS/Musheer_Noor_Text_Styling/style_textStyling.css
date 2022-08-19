@@ -1,0 +1,23 @@
+body{
+    font-family:cursive;
+}
+h1{
+    background-color: black;
+    color:cyan;
+    text-align:left;
+    height:;
+}
+h2{
+    background-color: purple;
+    color:white;
+    text-align:center;
+    font-style: italic;
+    font-weight:lighter;
+
+}
+h3{
+    background-color: cornflowerblue;
+    color: black;
+    text-align:right;
+    text-decoration: underline;
+}
