@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dojoWeather.css">
+    <title>Dojo Weather Assignment</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>DojoWeather</h1>
+            <ul class="cities">
+                <li><a href="#" onclick="chooseCity(this)">Burbank</a></li>
+                <li><a href="#" onclick="chooseCity(this)">Chicago</a></li>
+                <li><a href="#" onclick="chooseCity(this)">Dallas</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <div id="currentCityRow">
+                <h2>San Jose, CA </h2>
+                <div class="tempSelector">
+                    <label>show temperature in </label>
+                    <select name="selector" id="selector"  onchange="tempSelected()">
+                        <option value="celsius">°C</option>
+                        <option value="fahrenheit">°F</option>
+                    </select>
+                </div>
+            </div>
+            <div id="weather">
+                <div class="weatherCard">
+                    <h3>Today</h3>
+                    <img src="./assets/some_rain.png" name="rainy day image">
+                    <p>some rain</p>
+                    <div class="hi-and-low-temps">
+                        <p id="high-temp0" >24°</p>
+                        <p id="low-temp0" >18°</p>
+                    </div>
+                </div>
+                <div class="weatherCard">
+                    <h3>Tomorrow</h3>
+                    <img src="./assets/some_sun.png" name="rainy day image">
+                    <p>some sun</p>
+                    <div class="hi-and-low-temps">
+                        <p id="high-temp1" >27°</p>
+                        <p id="low-temp1" >19°</p>
+                    </div>
+                </div>
+                <div class="weatherCard">
+                    <h3>Friday</h3>
+                    <img src="./assets/some_clouds.png" name="rainy day image">
+                    <p>some clouds</p>
+                    <div class="hi-and-low-temps">
+                        <p id="high-temp2" >21°</p>
+                        <p id="low-temp2" >16°</p>
+                    </div>
+                </div>
+                <div class="weatherCard">
+                    <h3>Saturday</h3>
+                    <img src="./assets/some_sun.png" name="rainy day image">
+                    <p>some sun</p>
+                    <div class="hi-and-low-temps">
+                        <p id="high-temp3" >26°</p>
+                        <p id="low-temp3" >21°</p>
+                    </div>
+                </div>
+            </div>
+            <!--END Weather Card and Start Cookies Alert Box-->
+            <div id="cookieAlertBox">
+                <img src="./assets/cookie.png" alt="Cookie Image">
+                <div id="cookieText">
+                    <h3>Stop! Cookie time</h3>
+                    <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more</a></p>
+                </div>
+                <button class="acceptCookies" onclick="deleteCookieAlert(this)">I Accept</button>
+            </div>
+        </div>
+    </div>
+    <script src="./dojoWeather.js"></script>
+</body>
+</html>

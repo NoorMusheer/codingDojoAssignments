@@ -1,0 +1,152 @@
+* {
+    padding:0px;
+    margin:0px auto;
+}
+
+#container{
+    margin:0 auto;
+    border:2px solid black;
+}
+
+#header{
+    background-color: #119B9D;
+}
+
+#header-row1{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:70%;
+}
+
+#title{
+    display:flex;
+    flex:5;
+    align-items: center;
+    color:white;
+    font-size: 1.7rem;
+    flex:2;
+}
+#heartImage{
+    flex:1;
+}
+
+h1{
+    flex:7;
+}
+
+.navigation{
+    flex:2;
+    font-size: 1.7rem;
+    display:flex;
+    justify-content: space-between;
+}
+.navigation a{
+    color:black;
+    text-decoration: none;
+}
+
+#donateButton{
+    width:125px;
+    height:35px;
+    border-radius: 50%;
+    border:2px solid #9900FF;
+    color:#9900FF;
+    font-size:1.3rem;
+    font-weight:bold;
+}
+/* END Header Row-1 Styling */
+
+#header-row2{
+    width:70%;
+    font-size: 1.4rem;
+    padding:1% 0;
+    color:white;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    gap:10%;
+
+}
+.searchParameters{
+    display:flex;
+}
+#searchByPetType, #searchByLocation{
+    flex:1;
+}
+#submitFormData{
+    border:2px solid black;
+    background-color: #9900FF;
+    color:white;
+    font-size: 1.5rem;
+    height:50px;
+    box-shadow: 5px 5px 5px black;
+    flex:2;
+    position: relative;
+    top:-5px;
+    left:-5px;
+}
+
+.searchParamIcons{
+    height:40px;
+    width:40px;
+    flex:1;
+}
+#petChoice, #enterLocation{
+    flex:3;
+    font-size:1.1rem;
+}
+/* END Header Row-2 Styling */
+
+#main{
+    width:70%;
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.petInfoBox{
+    width:100%;
+    margin:2% 0;
+    display:flex;
+    align-items: center;
+    gap:2%;
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    height:150px;
+}
+
+.petInfoBox img{
+    flex:1;
+    height:140px;
+    border-radius: 20px;
+    margin-left:20px;
+}
+.petDescription{
+    flex:4;
+    font-size:1.5rem;
+    width:50%;
+    overflow: auto;
+
+}
+.pettings{
+    flex:2;
+    padding-right:20px;
+    text-align: right;
+    font-size: 1.5rem;
+    margin-right:20px;
+    
+}
+
+.clickToPet{
+    margin-top:10px;
+    box-shadow: 5px 5px 5px black;
+    background-color: #17CFD1;
+    color:white;
+    font-size:1.4rem;
+    width:175px;
+    height:50px;
+}
+
+

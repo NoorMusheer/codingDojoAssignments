@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pet Shelter WF 2021</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="header-row1">
+                <div id="title">
+                    <img id="heartImage" src="./assets/heart-light.png" alt="Pet Heart Icon">
+                    <h1>Pet Shelter</h1>
+                </div>
+                <div class="navigation">
+                    <h3><a href="#">Find a Pet</a></h3>
+                    <h3><a href="#">About</a></h3>
+                    <button id="donateButton" onclick="delDonateBtn(this)"    >Donate</button>
+                </div>
+            </div><!--End Header Row 1-->
+            <div id="header-row2">
+                <form action="#">
+                    <div id="searchByPetType">
+                        <label>I'm looking for a ...</label>
+                        <div class="searchParameters">
+                            <img class="searchParamIcons" src="./assets/paw-light.png" alt="paw print">
+                            <select name="chooseTypeOfPet" id="petChoice" onchange="typeChosen(this)">
+                                <option value="makeChoice" disabled selected>Any Pet</option>
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                                <option value="Bird">Bird</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="searchByLocation">
+                        <label>in or near ...</label>
+                        <div class="searchParameters">
+                            <img class="searchParamIcons" src="./assets/mapMarker-light.png" alt="Map Marker Icon">
+                            <input id="enterLocation" type="text" placeholder="City or Zip Code">
+                        </div>
+                    </div>
+                        <input  id="submitFormData" type="submit" value="Find your new best friend">
+                </form>
+            </div><!-- END Header Row-2 -->
+        </div><!-- END Header Section-->
+        <div id="main">
+            <div class="petInfoBox">
+                    <img src="./assets/pepper.jpg" alt="Pepper the Cat">
+                <div class="petDescription">
+                    <h2 class="petName">Pepper</h2>
+                    <p>Pepper is a slightly shy grey tabby, but she really loves showing her human affection.</p>
+                </div>
+                <div class="pettings">
+                    <p id="peppersPettings">3 petting(s)</p>
+                    <button class="clickToPet" onclick="increasePetting(0)"  >Pet Pepper</button>
+                </div>
+            </div>
+            <div class="petInfoBox">
+                    <img src="./assets/bruce.jpg" alt="Pepper the Cat">
+                <div class="petDescription">
+                    <h2 class="petName">Bruce</h2>
+                    <p>Bruce is a loyal companion. He loves long walks and cold weather.</p>
+                </div>
+                <div class="pettings">
+                    <p id="brucesPettings">5 petting(s)</p>
+                    <button class="clickToPet" onclick="increasePetting(1)">Pet Bruce</button>
+                </div>
+            </div>
+            <div class="petInfoBox">
+                <img src="./assets/oscar.jpg" alt="Pepper the Cat">
+            <div class="petDescription">
+                    <h2 class="petName">Oscar</h2>
+                    <p>Oscar is bright, energetic and friendly. He is looking for a good home.</p>
+                </div>
+                <div class="pettings">
+                    <p id="oscarsPettings">8 petting(s)</p>
+                    <button class="clickToPet" onclick="increasePetting(2)">Pet Oscar</button>
+                </div>
+            </div>
+        </div><!-- END Main Display-->
+    </div><!-- END Container-->
+    
+    <script src="script.js"></script>
+</body>
+</html>

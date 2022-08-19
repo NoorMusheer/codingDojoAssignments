@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin:0 auto;
+
+}
+
+#container {
+    background-color: white;
+    width:1080px;
+
+}
+
+#header-bar{
+    width:100%;
+    height:80px;
+    background-color: grey;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size:2rem;
+}
+
+#search{
+    display:flex;
+    align-items: center;
+}
+input{
+    width:400px;
+    height:40px;
+}
+
+#row{
+    width:1080px;
+    display:flex;
+    justify-content: space-evenly;
+    padding-top:20px;
+}
+
+#col-1{
+    flex:2;
+    margin-right:20px;
+}
+#col-2{
+    flex:1;
+}
+
+.definition-card, #comment-card{
+    border: 3px solid black;
+    width:100%;
+
+    margin-bottom:20px;
+}
+
+.definition-card{
+    display:flex;
+    align-items: center;
+    font-size:2.0rem;
+    height:300px;
+}
+
+#comment-card{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size:2rem;
+    height:250px;
+
+}
+
+.word{
+    height:80%;
+    flex:1;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.define{
+    flex:3;
+    margin:0px 30px;
+}
+
+button{
+    box-shadow:5px 5px black;
+    color: black;
+    height:35px;
+    width:100px;
+    font-size:1.5rem;
+}
+
+.likes-button{
+    background-color:goldenrod;
+}
+
+#login-button{
+    background-color: blue;
+    color:white;
+    width:10%;
+    height:50%;
+}
+
+#add-d{
+    background-color:mediumseagreen;
+    height:70px;
+    width:150px;
+    margin-bottom:30px;
+}

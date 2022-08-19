@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#container{
+    margin: 0 auto;
+}  
+
+#header{
+    background-color: lightskyblue;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 20%;
+    height:80px;
+    margin-bottom:2%;
+    font-size:1.5rem;
+}   
+
+ul{
+    display:flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.4rem;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-size:2rem;
+}
+/* End Header styles */
+
+#currentCityRow{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 20%;
+    font-size: 1.1rem;
+    border-bottom:2px solid black;
+    font-size:1.5rem;
+}
+
+#weather{
+    display: flex;
+    margin:2% 20%;
+    justify-content:space-between;
+}
+
+.weatherCard{
+    width:22%;
+    height:300px;
+    background-color: #EEEEEE;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding:3% 0;
+    font-size:1.5rem;
+}
+.weatherCard img{
+    width:70%;
+    border-radius: 50%;
+}
+
+.hi-and-low-temps{
+    display:flex;
+    justify-content: space-between;
+    width:60%;
+}
+.high-temp{
+    color:red;
+}
+.low-temp{
+    color:blue;
+}
+/* End Weather Card Styling */
+
+#cookieAlertBox{
+    border: 2px solid black;
+    margin:0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:150px;
+}
+
+#cookieAlertBox img{
+    flex:1;
+}
+#cookieText{
+    flex:5;
+    font-size:1.5rem;
+    height:100%;
+    margin-left:5%;
+    padding-top:15px;
+    overflow:auto;
+}
+#cookieAlertBox button{
+    flex:1;
+    height:40px;
+    width:120px;
+    margin-inline:5%;
+    box-shadow: 4px 4px 4px black;
+    background-color: #9FC5F8;
+    font-size:1.2rem;
+}
