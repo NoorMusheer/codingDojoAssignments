@@ -1,4 +1,4 @@
-"""
+
 #Basic - Print all integers from 0 to 150.
 for i in range(151):
     print(i)
@@ -27,7 +27,7 @@ for i in range(101):
         print(i)
 
 
-"""
+
 
 
 #Whoa. That Sucker's Huge - Add odd integers from 0 to 500,000, and print the final sum.
