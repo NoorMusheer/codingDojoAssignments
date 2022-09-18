@@ -1,4 +1,3 @@
-from os import times
 from flask import Flask
 app = Flask(__name__)
 
@@ -12,16 +11,18 @@ def dojo():
     return "Dojo!"
 
 
-@app.route('/say/<str:name>')
+@app.route('/say/<name>')
 def say(name):
     return f"Hi {name}! "
 
 
-@app.route('/repeat/<int:times>/<str:words>')
+@app.route('/repeat/<int:times>/<words>')
 def repeat(times, words):
     return f"{times * words}"
 
-
+@app.errorhandler(404)
+def invalid_route(e):
+    return "Sorry! No Response. Try Again. "
 
 if __name__ == "__main__":
     app.run(debug=True)
