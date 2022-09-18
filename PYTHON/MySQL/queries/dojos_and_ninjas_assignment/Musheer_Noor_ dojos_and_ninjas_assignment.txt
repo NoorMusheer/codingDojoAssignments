@@ -1,0 +1,71 @@
+SELECT * FROM dojos;
+SELECT * FROM ninjas;
+SET SQL_SAFE_UPDATES = 0;
+
+
+-- Query: Create 3 new dojos
+INSERT INTO dojos (name)
+VALUE ('San_Jose_Dojo'), ('Miagi_Dojo'), ('Virtual_Dojo');
+
+
+
+
+-- Query: Delete the 3 dojos you just created
+DELETE FROM dojos;
+
+
+
+-- Query: Create 3 more dojos
+INSERT INTO dojos (name) 
+VALUE ('New_Dojo1'), ('Online_Dojo'), ('Meta_Dojo');
+
+
+
+
+-- Query: Create 3 ninjas that belong to the first dojo
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUE ('Nin', 'Ja', 20,4), ('Nun', 'Ju', 30,4), ('Non', 'Jo', 40,4);
+
+
+
+
+
+-- Query: Create 3 ninjas that belong to the second dojo
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUE ('Adam', 'Black', 25, 5), ('Brianna', 'Darkyellow', 35, 5), ('Eva', 'Fuscia', 45, 5);
+
+
+
+
+-- Query: Create 3 ninjas that belong to the third dojo
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUE ('Greg', 'Hue', 27, 6), ('Ingrid', 'Jellybean', 37, 6), ('Katie', 'Lemon', 47, 6);
+
+
+
+
+
+-- Query: Retrieve all the ninjas from the first dojo
+SELECT * FROM ninjas
+LEFT JOIN dojos ON ninjas.id = ninjas.dojo_id
+WHERE dojo_id = 4;
+
+
+
+
+
+-- Query: Retrieve all the ninjas from the last dojo
+SELECT * FROM ninjas
+LEFT JOIN dojos ON ninjas.id = ninjas.dojo_id
+WHERE dojo_id = 6;
+
+
+
+
+
+-- Query: Retrieve the last ninja's dojo
+SELECT dojos.name, ninjas.first_name AS Ninjas_first, ninjas.last_name AS Ninjas_last
+FROM dojos
+JOIN ninjas ON dojos.id = ninjas.dojo_id
+WHERE ninjas.id = 21;
+
