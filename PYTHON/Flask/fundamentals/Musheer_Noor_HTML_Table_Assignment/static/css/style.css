@@ -1,0 +1,15 @@
+*{
+    padding: 0px;
+    margin: 0 auto;
+}
+
+.container{
+    text-align: center;
+    width: 70%;
+
+}
+
+table{
+    width: auto;
+    text-align: left;
+}
