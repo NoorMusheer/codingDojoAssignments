@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+    
+
+    <title>survey_result</title>
+</head>
+<body>
+<div class="container">
+    <h1>Here are your results</h1>
+    <table>
+        <tr>
+            <td>Full Name:</td>
+            <td class ="user_data">{{ session['username_first'] }} {{ session['username_last'] }}</td>
+        </tr>
+        <tr>
+            <td>Location:</td>
+            <td class ="user_data">{{ session['user_location'] }}</td>
+        </tr>
+        <tr>
+            <td>Favorite Language:</td>
+            <td class ="user_data">{{ session['user_fav_lang'] }}</td>
+        </tr>
+        <tr>
+            <td>What you had to say:</td>
+            <td class ="user_data">{{ session['user_comments'] }}</td>
+        </tr>
+    </table>
+</div>
+
+
+
+</body>
+</html>

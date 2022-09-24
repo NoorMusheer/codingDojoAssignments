@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+    <title>Dojo Survey</title>
+
+</head>
+
+
+<body>
+<div class="container">
+<!-- form that takes in name, location, favorite language, and comments -->
+<div class = "top-row">
+    <h1>About You</h1>
+</div>
+
+<form action="/process" method="POST">
+    <div class = "row">
+        <label>First Name: </label>
+        <input type="text" name="first_name">
+    </div>
+    <div class = "row">
+        <label>Last Name: </label>
+        <input type="text" name="last_name">
+    </div>
+    <div class = "row">
+        <label>Location: </label>
+        <input type="text" name="user_location">
+    </div>
+    <div class="row">
+        <label>Favorite Language: </label>
+        <select id="code_languages" name="user_fav_lang">
+            <option value="none_chosen">Choose One...</option>
+            <option value="HTML" >HTML</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="MySQL">MySQL</option>
+            <option value="Typescript">Typescript</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <div class="row">
+        <label>Comments: </label>
+        <textarea type="text" name="user_comments" id="text_box"></textarea>
+    </div>
+    <div class = "row">
+        <input type="submit" value="Submit My Info" id="submit_button">
+    </div>
+</form>
+
+
+
+
+
+</div>
+</body>
+</html>
