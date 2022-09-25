@@ -1,0 +1,46 @@
+MySQL Connection Errors _ Optional Assignment
+Using the project you made in the previous tab, go into the mysqlconnection.py file and produce as many PyMySQL errors as possible in twenty minutes. Try using mistyped strings, an incorrect username, remove values, etc.
+
+
+1)
+ERROR: 
+OperationalError
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'local' ([Errno 11001] getaddrinfo failed)")
+
+REASON: 
+This occurred when i changed this: 
+			connection = pymysql.connect(host='localhost',
+to this: 
+			connection = pymysql.connect(host='local',
+
+
+
+
+2) 
+ERROR: 
+OperationalError
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+REASON: 
+This occurred because i did not have the correct password. 
+
+
+3) 
+NO ERROR YET: 
+When i change "autocommit" to "False" from True. 
+
+
+4) 
+ERROR: 
+TypeError
+TypeError: MySQLConnection.__init__() takes 1 positional argument but 2 were given
+
+REASON: 
+this occurred when i chnaged this: 
+					class MySQLConnection:
+    						def __init__(self, db):
+to this: 	
+					class MySQLConnection:
+    						def __init__(self,):
+
+
