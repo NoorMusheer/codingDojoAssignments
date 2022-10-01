@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+
     <title>Ninja Confirmaion</title>
 </head>
 <body>
-    Ninja Confirmed Here. 
 
-    <div>First Name: {{ session['fname'] }}</div>
-    <div>Last Name: {{ session['lname'] }}</div>
-    <div>Age: {{ session['age'] }}</div>
-    <H2> Has been added to the ------- .</H2>
-    <a href="/dojos">Looks Good. Take me Home.</a>
-    <a href="/edit_ninja">Oops. I need to fix one more thing. </a>
+<div class="container add-ninja-container">
+    <div class="col edit-ninja-col">
+        <div class="cnfrm"><h2>Does this look right? </h2> </div>
+        <div class="cnfrm">First Name: {{ session['fname'] }}</div>
+        <div class="cnfrm">Last Name: {{ session['lname'] }}</div>
+        <div class="cnfrm">Age: {{ session['age'] }}</div>
+        <div class="confirm-ninja-bttns cnfrm">
+            <div><a href="/dojos"><button class="sub-btn">Looks Good. Take me Home.</button></a></div>
+            <div><a href="/edit_ninja"><button class="sub-btn">Oops. I need to fix one more thing.</button></a></div>
+        </div>
 </body>
 </html>

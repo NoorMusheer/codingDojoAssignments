@@ -31,6 +31,6 @@ class Dojo:
     @classmethod
     def ninjas_by_dojo(cls, id):
         data = {"id":id}
-        query = "SELECT * FROM dojos JOIN ninjas ON dojos.id = ninjas.dojo_id WHERE dojos.id = %(id)s;"
+        query = "SELECT *, ninjas.id AS NinID FROM dojos JOIN ninjas ON dojos.id = ninjas.dojo_id WHERE dojos.id = %(id)s;"
         return connectToMySQL(cls.DB).query_db(query,data)
 
