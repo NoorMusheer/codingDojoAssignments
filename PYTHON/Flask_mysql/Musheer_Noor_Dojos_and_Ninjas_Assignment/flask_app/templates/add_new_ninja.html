@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+
+    <title>Add A Ninja</title>
+
+</head>
+<body>
+<div class="container add-ninja-container">
+    <h1> New Ninja </h1>
+    <form action="/undefined_for_now" method="POST" class="add-ninja-form">
+        <select>
+            <option>For Loop through Dojo List Here</option>
+            <option>2nd option, but created by the loop</option>
+            <option>3rd opt. created by loop</option>
+        </select>
+        <label>First Name</label>
+        <input type="text" name="fname">
+        <label>Last Name</label>
+        <input type="text" name="lname">
+        <label>Age</label>
+        <input type="number" name="age">
+        <input type="submit" value="Add Ninja">
+    </form>
+</div>
+</body>
+</html>
