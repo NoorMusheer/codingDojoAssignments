@@ -15,11 +15,14 @@ def dojo_records():
 
 @app.route('/add_dojo', methods=['POST'])
 def add_dojo_page():
-    data = {
-        "name" : request.form['new_dojo']
-    }
-    Dojo.create_a_dojo(data)
-    return redirect('/')
+    if not request.form['new_dojo']:
+        return redirect('/')
+    else:
+        data = {
+            "name" : request.form['new_dojo']
+        }
+        Dojo.create_a_dojo(data)
+        return redirect('/')
 
 @app.route('/dojos/<int:id>')
 def show_dojo_ninjas(id):

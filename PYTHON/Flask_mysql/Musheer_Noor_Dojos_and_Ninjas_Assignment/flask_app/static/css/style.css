@@ -3,18 +3,37 @@
 }
 
 .main-row{
-    border: 2px solid blue;
     display: flex;
     margin-top:5%;
-    width:50%;
+    width:90%;
+}
+
+.col{
+    background-color: slategray;
+    color:rgb(225, 200, 125);
+    margin: 0 4%;
+    padding: 3%;
+}
+
+.col-1{
+    height:200px;
+    flex: 1;
 }
 
 table{
     border: 2px solid black;
+}
+a{
+    color:rgb(225, 200, 125);
+    font-size: 1.3rem;
 }
 
 .add-ninja-container,.add-ninja-form{
     display:flex;
     flex-direction: column;
     margin-top:5%;
+}
+
+label{
+    font-size: 1.3rem;
 }

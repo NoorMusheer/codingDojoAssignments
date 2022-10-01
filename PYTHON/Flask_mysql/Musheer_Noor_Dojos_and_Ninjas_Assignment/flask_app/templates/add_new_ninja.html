@@ -12,11 +12,11 @@
 <body>
 <div class="container add-ninja-container">
     <h1> New Ninja </h1>
-    <form action="/undefined_for_now" method="POST" class="add-ninja-form">
-        <select>
-            <option>For Loop through Dojo List Here</option>
-            <option>2nd option, but created by the loop</option>
-            <option>3rd opt. created by loop</option>
+    <form action="/ninja_added" method="POST" class="add-ninja-form">
+        <select name="dojo_id">
+            {% for dojo in all_dojos %}
+            <option value = "{{dojo.id}}"> {{ dojo.name }}</option>
+            {% endfor %}
         </select>
         <label>First Name</label>
         <input type="text" name="fname">
