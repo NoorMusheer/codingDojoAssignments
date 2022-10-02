@@ -27,7 +27,5 @@ def add_dojo_page():
 @app.route('/dojos/<int:id>')
 def show_dojo_ninjas(id):
     ninjas_list = Dojo.ninjas_by_dojo(id)
-    print("-----HERE IS THE LIST RESULT -----")
-    print(ninjas_list)
     return render_template("dojo_info.html", ninjas_list = ninjas_list)
 

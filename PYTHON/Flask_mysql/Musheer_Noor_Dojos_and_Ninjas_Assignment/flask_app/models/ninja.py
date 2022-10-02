@@ -14,7 +14,7 @@ class Ninja :
 
     @classmethod
     def create_ninja(cls, data):
-        query = "INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUE (%(first_name)s, %(last_name)s, %(age)s, %(dojo_id)s);"
+        query = "INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) VALUE (%(first_name)s, %(last_name)s, %(age)s, %(dojo_id)s, NOW(), NOW() );"
         return connectToMySQL(cls.DB).query_db(query, data)
 
     @classmethod
@@ -23,3 +23,14 @@ class Ninja :
         query = "SELECT * FROM ninjas WHERE ninjas.id = %(id)s"
         result = connectToMySQL(cls.DB).query_db(query,data)
         return result
+
+    @classmethod
+    def update_ninja(cls, data):
+        query="UPDATE ninjas SET first_name = %(first_name)s, last_name = %(last_name)s, age = %(age)s WHERE id = %(id)s;"
+        return connectToMySQL(cls.DB).query_db(query, data)
+
+    @classmethod
+    def delete_ninja(cls, id):
+        data = {"id":id}
+        query = "DELETE FROM ninjas WHERE id = %(id)s;"
+        return connectToMySQL(cls.DB).query_db(query, data)

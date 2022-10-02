@@ -14,12 +14,35 @@
 <div class="container add-ninja-container">
     <div class="col edit-ninja-col">
         <div class="cnfrm"><h2>Does this look right? </h2> </div>
-        <div class="cnfrm">First Name: {{ session['fname'] }}</div>
-        <div class="cnfrm">Last Name: {{ session['lname'] }}</div>
-        <div class="cnfrm">Age: {{ session['age'] }}</div>
+        <div class="cnfrm">First Name: 
+            {% if not session['fname'] %}
+                No data given. 
+            {%else %}
+                {{session['fname'] }}
+            {% endif %}
+        </div>
+        <div class="cnfrm">Last Name: 
+            {% if not session['fname'] %}
+            No data given. 
+            {%else %}
+                {{ session['lname'] }}
+            {% endif %}
+        </div>
+        <div class="cnfrm">Age: 
+            {% if not session['fname'] %}
+            No data given. 
+            {%else %}
+                {{ session['age'] }}
+            {% endif %}</div>
         <div class="confirm-ninja-bttns cnfrm">
-            <div><a href="/dojos"><button class="sub-btn">Looks Good. Take me Home.</button></a></div>
-            <div><a href="/edit_ninja"><button class="sub-btn">Oops. I need to fix one more thing.</button></a></div>
+            {% if not session['fname'] %}
+            {%else %}
+            <div><a href="/dojos"><button class="sub-btn">Yes. Take me Home.</button></a></div>
+            {% endif %}
+            <div><a href="/add_ninja"><button class="sub-btn">Oops. Let me try again. </button></a></div>
+        </div>
+        <div>
+            <a href="/">Home</a>
         </div>
 </body>
 </html>

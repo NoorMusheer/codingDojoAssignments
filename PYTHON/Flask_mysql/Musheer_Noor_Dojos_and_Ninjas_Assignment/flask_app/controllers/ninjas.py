@@ -11,17 +11,17 @@ def add_ninja_page():
 
 @app.route('/ninja_added', methods=['POST'])
 def new_ninja_info():
-    data = {
-        "dojo_id" : request.form['dojo_id'],
-        "first_name" : request.form['fname'],
-        "last_name" : request.form['lname'],
-        "age" : request.form['age']
-    }
-    session['fname'] = request.form['fname']
-    session['lname'] = request.form['lname']
-    session['age'] = request.form ['age']
-    Ninja.create_ninja(data)
-    return redirect("/ninja_page")
+        session['fname'] = request.form['fname']
+        session['lname'] = request.form['lname']
+        session['age'] = request.form ['age']
+        data = {
+            "dojo_id" : request.form['dojo_id'],
+            "first_name" : request.form['fname'],
+            "last_name" : request.form['lname'],
+            "age" : request.form['age']
+        }
+        Ninja.create_ninja(data)
+        return redirect("/ninja_page")
 
 @app.route('/ninja_page')
 def show_new_ninja():
@@ -30,14 +30,28 @@ def show_new_ninja():
 @app.route('/edit_ninja/<int:id>')
 def edit_ninja(id):
     nnja_info = Ninja.get_ninja_by_id(id)
-    print("---------NNJA INFO ---- ")
-    print(nnja_info)
     return render_template("edit_ninjas.html", nnja_info = nnja_info)
 
-@app.route('/delete_ninja/<int:id>')
-def delete_ninja():
-    return render_template("dojo_info.html")
+@app.route('/edit_ninja')
+def new_ninja_correction():
+    return redirect("edit_ninjas.html")
 
-@app.route('/ninja_update')
+@app.route('/delete_ninja/<int:NinId>/<int:id>')
+def delete_ninja(NinId, id):
+    Ninja.delete_ninja(NinId)
+    return redirect("/dojos/" + str(id))
+
+@app.route('/ninja_update', methods=['POST'])
 def updated_ninja():
-    return render_template ('/updated_ninja.html')
+    data = {
+        "id":request.form['id'],
+        "first_name" : request.form['fname'],
+        "last_name" : request.form['lname'],
+        "age": request.form['age']
+    }
+    Ninja.update_ninja(data)
+    return redirect('/confirm_update')
+
+@app.route('/confirm_update')
+def confirm_update():
+    return render_template('/updated_ninja.html')

@@ -30,7 +30,7 @@
                     <td><h4> {{ ninja.age }} </h4></td>
                     <td>
                         <td> <a href="/edit_ninja/{{ninja.NinID}}">Edit</a></td>
-                        <td> <a href="/delete_ninja">Delete</a></td>
+                        <td> <a href="/delete_ninja/{{ninja.NinID}}/{{ninjas_list[0]['id']}}">Delete</a></td>
                     </td>
                 </tr>
                 {% endfor %}
