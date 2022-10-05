@@ -19,8 +19,6 @@ def add_author():
 @app.route('/author_show/<int:id>')
 def author_show(id):
     books = Book.all_books()
-    print("------SHOULD BE BOOKS LIST BELOW ------")
-    print(books)
     author_info = Author.get_author_by_id(id)
     author_favs = Author.get_fav_books_by_author(id)
     return render_template("author_show.html", author = author_info, author_favs = author_favs, all_books = books)

@@ -33,12 +33,11 @@
             </div>
             <div class="col-right col">
                 <h2>Add Author's Favorite</h2>
-                <form action="/add_fav_book", method="POST"></form>
-                    <label>Book</label>
-                    <input type="text" name="title">
-                    <select name="fav_book" id="fav_book" value="{{ id }}">
+                Book:
+                <form action="/add_fav_book/{{author.id}}", method="POST">
+                    <select name="book_id">
                         {% for book in all_books %}
-                        <option value="{{ book.title }}">{{book.title}}</option>
+                        <option value="{{ book.id }}">{{book.title}}</option>
                         {% endfor %}
                     </select>
                     <input type="submit" value="Add">

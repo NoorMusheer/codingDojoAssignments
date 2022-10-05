@@ -8,8 +8,14 @@ def all_books():
     books = Book.all_books()
     return render_template('all_books.html', all_books = books)
 
-@app.route('/add_fav_book', methods=['POST'])
+@app.route('/add_fav_book/<int:id>', methods=['POST'])
 def add_fav_book(id):
+    print("------------ID ___")
+    print(request.form)
+    data = {
+        "book_id":request.form['book_id']
+    }
+    print(data)
     return redirect('/author_show/<int:id>')
 
 @app.route('/add_book', methods=['POST'])
