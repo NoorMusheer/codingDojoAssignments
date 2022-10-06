@@ -10,13 +10,12 @@ def all_books():
 
 @app.route('/add_fav_book/<int:id>', methods=['POST'])
 def add_fav_book(id):
-    print("------------ID ___")
-    print(request.form)
     data = {
-        "book_id":request.form['book_id']
+        "book_id" : request.form['book_id'],
+        "author_id" : id
     }
-    print(data)
-    return redirect('/author_show/<int:id>')
+    Author.add_to_favs(data)
+    return redirect('/author_show/' + str(id))
 
 @app.route('/add_book', methods=['POST'])
 def add_book():

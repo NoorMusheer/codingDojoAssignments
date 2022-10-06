@@ -23,3 +23,14 @@ def author_show(id):
     author_favs = Author.get_fav_books_by_author(id)
     return render_template("author_show.html", author = author_info, author_favs = author_favs, all_books = books)
 
+@app.route('/add_fav_auth/<int:id>', methods=['POST'])
+def add_fav_auth(id):
+    print("----------ID ---------")
+    print(id)
+    data ={
+        "book_id" : id,
+        "author_id" : request.form['author_id']
+    }
+    print(data)
+    Author.add_to_favs(data)
+    return redirect ('/favorited_books/'+ str(id))

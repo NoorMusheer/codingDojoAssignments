@@ -31,3 +31,8 @@ class Author:
         data = {"id":id}
         query = "SELECT * FROM authors LEFT JOIN favorites ON favorites.author_id = authors.id LEFT JOIN books ON books.id = favorites.book_id WHERE authors.id = %(id)s;"
         return connectToMySQL(cls.DB).query_db(query, data)
+
+    @classmethod
+    def add_to_favs(cls, data):
+        query = "INSERT INTO favorites (book_id, author_id) VALUES (%(book_id)s, %(author_id)s);"
+        return connectToMySQL(cls.DB).query_db(query, data)

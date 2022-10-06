@@ -28,15 +28,17 @@
             </div>
             <div class="col-right col">
                 <h2>Add Book's Favorite</h2>
-                <form action="/", method="POST"></form>
-                    <label>Author </label>
-                    <select name="authors_fav" id="authors_fav" value="id">
+                Author:
+                <form action="/add_fav_auth/{{favd_book.id}}", method="POST">
+                    <select name="author_id" >
                         {% for auth in all_authors %}
-                        <option value="name">{{ auth.name }}</option>
+                        <option value="{{ auth.id }}">{{ auth.name }}</option>
                         {% endfor %}
                     </select>
                     <input type="submit" value="Add">
-            </form>
+                </form>
+            <div class="home-div"><a href="/">Home</a></div>
+
             </div>
 
         </div>
