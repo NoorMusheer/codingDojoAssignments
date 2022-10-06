@@ -1,0 +1,41 @@
+*{
+    margin: 0 auto;
+
+}
+
+.container{
+    margin-top:5%;
+}
+.main-body{
+    display:flex;
+}
+
+.col, form{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    align-items: center;
+}
+
+form, a, th, td, option{
+    background-color: slategray;
+    color: rgb(250, 200, 125);
+    font-size: 1.2rem;
+}
+select{
+    background-color: rgb(127, 143, 159);
+    color: rgb(250, 200, 125);
+}
+.home-div{
+    margin-top:3%;
+}
+table{
+    background-color:slategray;
+    color: rgb(250, 200, 125);
+    border: 2px solid black;
+    padding:5% 15%;
+    margin-bottom:15px;
+}
+
+
+
