@@ -9,10 +9,15 @@
 </head>
 <body>
 <div class="container">
-    <div id="home-link"> <a href="/">Home</a>  </div>
     <h1>Add a new user</h1>
     <form action="/users" method = "POST">
-        
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {%endfor%}
+        {%endif%}
+    {%endwith%}
         <div class = "row">
         <label>First Name: </label>
         <input type="text" name="fname">
@@ -30,11 +35,7 @@
 
         <input type="submit" value = "Create User" id="submit_button">
     </form>
-
-
-
-
-
+    <div id="home-link"> <a href="/">Home</a>  </div>
 </div>
 </body>
 </html>

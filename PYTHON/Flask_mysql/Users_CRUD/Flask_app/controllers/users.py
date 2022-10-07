@@ -1,5 +1,5 @@
 from Flask_app import app
-from flask import render_template, redirect, request
+from flask import render_template, redirect, request, session
 from Flask_app.models.user import User
 
 @app.route('/')
@@ -10,13 +10,18 @@ def index():
 
 @app.route('/users', methods=['POST'])
 def create_user():
+    if not User.validate_user(request.form):
+        return redirect('/users/new')
     data = {
         "fname" : request.form['fname'],
         "lname" : request.form['lname'],
         "email" : request.form['email']
     }
+    session['fname'] = request.form['fname']
+    session['lname'] = request.form['lname']
+    session['email'] = request.form['email']
     User.save(data)
-    return redirect('/')
+    return redirect('/users/show_recent')
 
 @app.route('/users/new')
 def form_file():
@@ -26,6 +31,11 @@ def form_file():
 def delete_user(id):
     User.delete(id)
     return redirect('/')
+
+@app.route('/users/show_recent')
+def display_just_added_info_test():
+    return render_template('/show.html')
+
 
 @app.route('/users/show/<int:id>')
 def show_user(id):

@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>User Info</h1>
+        <h1>User Added</h1>
         <table class="table table-hover table-responsive">
             <thead>
                 <tr>
@@ -22,14 +22,16 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{user.first_name}}</td>
-                    <td>{{user.last_name}}</td>
-                    <td>{{user.email}}</td>
+                    <td>{{ session['fname'] }}</td>
+                    <td>{{ session['lname'] }}</td>
+                    <td>{{ session['email'] }}</td>
 
                 </tr>
 
             </tbody>
         </table>
+        <div id="home-link"> <a href="/">Home</a>  </div>
+
     </div> 
 </body>
 </html>
