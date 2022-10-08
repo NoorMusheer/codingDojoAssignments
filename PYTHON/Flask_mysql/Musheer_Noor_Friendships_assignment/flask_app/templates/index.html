@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static', filename=('/css/style.css'))}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover">
+                    <thead>
+                        <th colspan="2"><h2>Friendships</h2></th>
+                        <tr>
+                                <td>  User</td>
+                                <td>Friend</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for friend in all_friends %}
+                        <tr>
+                            <td>{{ friend.first_name }} {{ friend.last_name }}</td>
+                            <td>{{ friend.fr_first }} {{friend.fr_last }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                
+            </div>
+            <!-- Blank Col for spacing -->
+            <div class="col-1"></div>
+            <!-- COL 3 Starts here -->
+            <div class="col">
+                <!-- COL 3 Row 1 -->
+                <div class="row">
+                    <form action="/add_user" method="POST">
+                        <div class="inner-row"><h2>Add User</h2></div>
+                        <div class="inner-row">
+                        <label>First Name</label>
+                        <input type="text" name="first_name" class="user-input">
+                        </div>
+                        <div class="inner-row">
+                        <label>Last Name</label>
+                        <input type="text" name="last_name" class="user-input">
+                        </div>
+                        <div class="inner-row"><input type="submit" value="Add user" class="btn btn-outline-primary"></div>
+                    </form>
+                </div>
+                    <!-- COL 3 Row 2 -->
+                <div class="row col3-row2">
+                    <form action='/create_friends' method="POST">
+                        <div class="inner-row"><h2>Create Friendship</h2></div>
+                        <div class="inner-row">
+                            <label>User:</label>
+                            <select name="user_id" class="user-input">
+                                {% for user in all_users %}
+                                    <option value="{{user.id}}" class="user-input">{{ user.first_name}} {{user.last_name}} </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="inner-row">
+                            <label>Friend:</label>
+                            <select name="user2_id" class="user-input">
+                                {% for user2 in all_users %}
+                                    <option value="{{user2.id}} " class="user-input">{{ user2.first_name}} {{user2.last_name}} </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="inner-row"><input type="submit" value="Create" class="btn btn-outline-primary"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

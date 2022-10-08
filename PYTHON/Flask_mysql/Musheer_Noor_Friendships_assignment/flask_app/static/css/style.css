@@ -1,0 +1,27 @@
+*{
+    margin: 0 auto;
+}
+
+.container{
+    margin-top:5%;
+}
+
+.col3-row2, .inner-row{
+    margin:4% 0;
+}
+
+form, table, thead, h2, td, th,.btn, option{
+    background-color: black;
+    color:#9cc3fe;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.btn, thead, label, option{
+    font-size: 1.5em;
+}
+
+.user-input{
+    width:300px;
+    height: 35px;
+}
