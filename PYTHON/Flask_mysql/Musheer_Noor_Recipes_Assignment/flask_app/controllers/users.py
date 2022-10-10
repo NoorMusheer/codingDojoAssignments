@@ -25,6 +25,9 @@ def register_user():
             }
     user = User.get_user_by_email(user_data)
     if not User.validate_reg(user_data, user):
+        session['first_name']=user_data['first_name']
+        session['last_name']=user_data['last_name']
+        session['email']=user_data['email']
         return redirect('/welcome')
     User.create_user(request.form)
     session['first_name'] = request.form['first_name']
