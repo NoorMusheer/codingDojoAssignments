@@ -30,6 +30,15 @@ class Sll{
         this.head = this.head.next;
         return this;
     }
+
+    // Write a method to return the value (not the node) at the head of the list. If the list is empty, return null.
+
+    returnFront(){
+        if (!this.head){
+            return null;
+        }
+        return this.head.data;
+    }
 }
 Sll1 = new Sll()
 console.log(Sll1.addFront(18))
@@ -38,4 +47,8 @@ console.log(Sll1.addFront(73))
 
 console.log(Sll1.removeFront())
 console.log(Sll1.removeFront())
+
+console.log(Sll1.returnFront())
+console.log(Sll1.removeFront())
+console.log(Sll1.returnFront())
 
