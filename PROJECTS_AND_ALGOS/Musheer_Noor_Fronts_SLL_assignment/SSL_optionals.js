@@ -63,6 +63,7 @@ console.log(Sll1.addFront(-80))
 console.log(Sll1.addFront(65))
 
 
-console.log(Sll1.contains(30))
+console.log(Sll1.contains(30))   //this returns false
+console.log(Sll1.contains(73))   //this returns true
 
 
